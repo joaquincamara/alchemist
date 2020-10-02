@@ -43,12 +43,18 @@ func createReactApp() {
 	var serviceWorkerContent = reactContent.ServiceWorkerContentGenerator()
 	var setUpTestContent = reactContent.SetUpTestContentGenerator()
 
+	// PUBLIC files
+
+	var indexHtmlContent = reactContent.IndexHtmlContentGenerator()
+	var manifestJsonContent = reactContent.ManifestJsonContentGenerator()
+	var robotsTxtContent = reactContent.RobotsTxtContentGenerator()
+
 	fmt.Print("Enter the name of you app: ")
 	fmt.Scanln(&appName)
 
 	os.Mkdir(appName, 0755)
 	os.Mkdir(appName+"/src", 0755)
-	os.Mkdir(appName+"/puclic", 0755)
+	os.Mkdir(appName+"/public", 0755)
 
 	// Project base files creation
 
@@ -67,7 +73,7 @@ func createReactApp() {
 		log.Fatal(gitIgnoreContentErr)
 	}
 
-	// SRC files creation
+	// SRC directory files creation
 
 	appCssContentContentErr := ioutil.WriteFile(appName+"/src/App.css", appCssContent, 0644)
 	if appCssContentContentErr != nil {
@@ -107,6 +113,23 @@ func createReactApp() {
 	setUpTestContentErr := ioutil.WriteFile(appName+"/src/setupTests.js", setUpTestContent, 0644)
 	if setUpTestContentErr != nil {
 		log.Fatal(setUpTestContentErr)
+	}
+
+	// PUBLIC directory files creation
+
+	indexHtmlContentErr := ioutil.WriteFile(appName+"/public/index.html", indexHtmlContent, 0644)
+	if indexHtmlContentErr != nil {
+		log.Fatal(indexHtmlContentErr)
+	}
+
+	manifestJsonContentErr := ioutil.WriteFile(appName+"/public/manifest.json", manifestJsonContent, 0644)
+	if indexHtmlContentErr != nil {
+		log.Fatal(manifestJsonContentErr)
+	}
+
+	robotsTxtContentErr := ioutil.WriteFile(appName+"/public/robots.txt", robotsTxtContent, 0644)
+	if indexHtmlContentErr != nil {
+		log.Fatal(robotsTxtContentErr)
 	}
 
 }
