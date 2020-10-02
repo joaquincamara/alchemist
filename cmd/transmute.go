@@ -48,8 +48,11 @@ func createReactApp() {
 	var indexHtmlContent = reactContent.IndexHtmlContentGenerator()
 	var manifestJsonContent = reactContent.ManifestJsonContentGenerator()
 	var robotsTxtContent = reactContent.RobotsTxtContentGenerator()
-
-	fmt.Print("Enter the name of you app: ")
+	fmt.Println(" ")
+	fmt.Println("        Wellcome fellow alchemist lets go trough some steps to start transmuting you app        ")
+	fmt.Println("================================================================================================")
+	fmt.Println(" ")
+	fmt.Print("        1.- Enter the name of you app:        ")
 	fmt.Scanln(&appName)
 
 	os.Mkdir(appName, 0755)
