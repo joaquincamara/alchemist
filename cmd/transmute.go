@@ -53,6 +53,10 @@ func createReactApp() {
 	fmt.Println("================================================================================================")
 	fmt.Println(" ")
 	fmt.Print("        1.- Enter the name of you app:        ")
+	fmt.Print("        1.- Select a React.js package manager:        ")
+	fmt.Print("")
+	fmt.Println("1.- Yarn")
+	fmt.Println("2.- Npm")
 	fmt.Scanln(&appName)
 
 	os.Mkdir(appName, 0755)
