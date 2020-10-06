@@ -7,6 +7,7 @@ import (
 	"os"
 
 	"alchemist/reactContent"
+	"alchemist/utils"
 
 	"github.com/spf13/cobra"
 )
@@ -141,6 +142,11 @@ func createReactApp() {
 		log.Fatal(robotsTxtContentErr)
 	}
 
-	//	utils.ExecuteSystemCommand("cd", "server")
+	// Handle the execution of the input.
+	if err := utils.ExecuteSystemCommand("cd " + appName); err != nil {
+		fmt.Fprintln(os.Stderr, err)
+	}
+
+	utils.ExecuteSystemCommand("ls")
 
 }
