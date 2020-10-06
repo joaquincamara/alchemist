@@ -7,6 +7,7 @@ import (
 	"os"
 
 	"alchemist/reactContent"
+	"alchemist/utils"
 
 	"github.com/spf13/cobra"
 )
@@ -48,12 +49,18 @@ func createReactApp() {
 	var indexHtmlContent = reactContent.IndexHtmlContentGenerator()
 	var manifestJsonContent = reactContent.ManifestJsonContentGenerator()
 	var robotsTxtContent = reactContent.RobotsTxtContentGenerator()
+
 	fmt.Println(" ")
 	fmt.Println("        Wellcome fellow alchemist lets go trough some steps to start transmuting you app        ")
 	fmt.Println("================================================================================================")
 	fmt.Println(" ")
+
 	fmt.Print("        1.- Enter the name of you app:        ")
 	fmt.Scanln(&appName)
+	fmt.Println("        1.- Select a React.js package manager:        ")
+	fmt.Println("")
+	fmt.Println("          A).- Yarn")
+	fmt.Println("          B).- Npm")
 
 	os.Mkdir(appName, 0755)
 	os.Mkdir(appName+"/src", 0755)
@@ -134,5 +141,12 @@ func createReactApp() {
 	if indexHtmlContentErr != nil {
 		log.Fatal(robotsTxtContentErr)
 	}
+
+	// Handle the execution of the input.
+	if err := utils.ExecuteSystemCommand("cd " + appName); err != nil {
+		fmt.Fprintln(os.Stderr, err)
+	}
+
+	utils.ExecuteSystemCommand("ls")
 
 }
