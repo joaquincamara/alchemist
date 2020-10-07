@@ -5,6 +5,7 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
+	"os/exec"
 
 	"alchemist/reactContent"
 	"alchemist/utils"
@@ -147,6 +148,12 @@ func createReactApp() {
 		fmt.Fprintln(os.Stderr, err)
 	}
 
+	// Prepare the command to execute.
+	cmd := exec.Command("yarn", "install")
+
+	// Set the correct output device.
+	cmd.Stderr = os.Stderr
+	cmd.Stdout = os.Stdout
 	utils.ExecuteSystemCommand("ls")
 
 }
