@@ -14,6 +14,13 @@ var transmuteCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 
 		switch {
+		case len(args) == 0:
+			fmt.Println("")
+			fmt.Println("Still working on this spell. Use any of the next commands:")
+			fmt.Println("")
+			fmt.Println("> alchemist transmute react my-app: create a stand alone React.js app")
+			fmt.Println("")
+			break
 		case "react" == args[0]:
 			if len(args) == 2 {
 				reactContent.CreateReactApp(args[1])
@@ -21,7 +28,7 @@ var transmuteCmd = &cobra.Command{
 			} else {
 				fmt.Println("Insert the name of your React-app after the 'React' command: 'alchemist transmute react my-app'")
 			}
-
+			break
 		}
 	},
 }
