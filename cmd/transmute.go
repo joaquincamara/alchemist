@@ -1,7 +1,9 @@
 package cmd
 
 import (
+	"alchemist/nestContent"
 	"alchemist/reactContent"
+
 	"fmt"
 
 	"github.com/spf13/cobra"
@@ -26,7 +28,15 @@ var transmuteCmd = &cobra.Command{
 				reactContent.CreateReactApp(args[1])
 				break
 			} else {
-				fmt.Println("Insert the name of your React-app after the 'React' command: 'alchemist transmute react my-app'")
+				fmt.Println("Insert the name of your React-app after the 'react' command: 'alchemist transmute react my-app'")
+			}
+			break
+		case "nest" == args[0]:
+			if len(args) == 2 {
+				nestContent.CreateNestApp(args[1])
+				break
+			} else {
+				fmt.Println("Insert the name of your Nest-app after the 'nest' command: 'alchemist transmute nest my-app'")
 			}
 			break
 		}
