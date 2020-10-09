@@ -5,10 +5,8 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
-	"os/exec"
 
 	"alchemist/reactContent"
-	"alchemist/utils"
 
 	"github.com/spf13/cobra"
 )
@@ -144,16 +142,16 @@ func createReactApp() {
 	}
 
 	// Handle the execution of the input.
-	if err := utils.ExecuteSystemCommand("cd " + appName); err != nil {
-		fmt.Fprintln(os.Stderr, err)
-	}
+	/*	if err := utils.ExecuteSystemCommand("cd " + appName); err != nil {
+			fmt.Fprintln(os.Stderr, err)
+		}
 
-	// Prepare the command to execute.
-	cmd := exec.Command("yarn", "install")
+		// Prepare the command to execute.
+		cmd := exec.Command("yarn", "install")
 
-	// Set the correct output device.
-	cmd.Stderr = os.Stderr
-	cmd.Stdout = os.Stdout
-	utils.ExecuteSystemCommand("ls")
-
+		// Set the correct output device.
+		cmd.Stderr = os.Stderr
+		cmd.Stdout = os.Stdout
+		utils.ExecuteSystemCommand("ls")
+	*/
 }
