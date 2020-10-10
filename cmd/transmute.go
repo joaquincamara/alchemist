@@ -3,9 +3,11 @@ package cmd
 import (
 	"alchemist/nestContent"
 	"alchemist/reactContent"
-	"os"
-
+	"alchemist/utils"
 	"fmt"
+	"io/ioutil"
+	"log"
+	"os"
 
 	"github.com/spf13/cobra"
 )
@@ -60,4 +62,9 @@ func createMonolit(appName string) {
 	os.Mkdir(appName, 0755)
 	nestContent.CreateNestApp(appName + "/client")
 	reactContent.CreateReactApp(appName + "/server")
+
+	alchemistJsonErr := ioutil.WriteFile(appName+"/alchemist.json", utils.AlchemistJson(appName, "monolit"), 0644)
+	if alchemistJsonErr != nil {
+		log.Fatal(alchemistJsonErr)
+	}
 }
