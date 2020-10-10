@@ -3,6 +3,7 @@ package cmd
 import (
 	"alchemist/nestContent"
 	"alchemist/reactContent"
+	"os"
 
 	"fmt"
 
@@ -39,10 +40,24 @@ var transmuteCmd = &cobra.Command{
 				fmt.Println("Insert the name of your Nest-app after the 'nest' command: 'alchemist transmute nest my-app'")
 			}
 			break
+		case "monolit" == args[0]:
+			if len(args) == 2 {
+				createMonolit(args[1])
+				break
+			} else {
+				fmt.Println("Insert the name of your App after the 'monolit' command: 'alchemist transmute monolit my-app'")
+			}
+			break
 		}
 	},
 }
 
 func init() {
 	rootCmd.AddCommand(transmuteCmd)
+}
+
+func createMonolit(appName string) {
+	os.Mkdir(appName, 0755)
+	nestContent.CreateNestApp(appName + "/client")
+	reactContent.CreateReactApp(appName + "/server")
 }
