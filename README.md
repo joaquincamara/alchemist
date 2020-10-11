@@ -8,6 +8,8 @@ To invoque any of the ancestral spells of our book of Alchemy we need to use the
 
 - **\$alchemist transmute** : this command is going to start the transmutation of a new alchemist's project, with a React.js app and a base go server. **NOTE: The development of the base server go is still on work by the moment run this code is going to return a "Still working on this spell." message.**
 
+- **\$alchemist transmute monolit my-app** : this command is going to start the transmutation of a new monolit app with a nest.js app based on the https://github.com/nestjs/typescript-starter.git configuration for the server and a React.js app based on the create-react-app configuration for the client.
+
 - **\$alchemist transmute react my-app** : this command is going to start the transmutation of a new stand alone React.js app based on the create-react-app configuration.
 
 - **\$alchemist transmute nest my-app** : this command is going to start the transmutation of a new stand alone nest.js app based on the https://github.com/nestjs/typescript-starter.git project configuration.
