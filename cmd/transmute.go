@@ -1,13 +1,14 @@
 package cmd
 
 import (
-	"alchemist/nestContent"
-	"alchemist/reactContent"
-	"alchemist/utils"
 	"fmt"
 	"io/ioutil"
 	"log"
 	"os"
+
+	"github.com/joaquincamara/alchemist.go/nestContent"
+	"github.com/joaquincamara/alchemist.go/reactContent"
+	"github.com/joaquincamara/alchemist.go/utils"
 
 	"github.com/spf13/cobra"
 )
