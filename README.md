@@ -36,7 +36,7 @@ To invoque any of the ancestral spells of our book of Alchemy we need to use the
 
 ### Dependencies:
 
-**Our transmutations are made possible by Nest.js, react.js and cobra.go**
+**Our transmutations are possible by Nest.js, react.js and cobra.go**
 
 ======================
 
