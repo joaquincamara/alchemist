@@ -6,9 +6,9 @@ import (
 	"log"
 	"os"
 
-	"github.com/joaquincamara/alchemist.go/nestContent"
-	"github.com/joaquincamara/alchemist.go/reactContent"
-	"github.com/joaquincamara/alchemist.go/utils"
+	"github.com/joaquincamara/alchemist/nestContent"
+	"github.com/joaquincamara/alchemist/reactContent"
+	"github.com/joaquincamara/alchemist/utils"
 
 	"github.com/spf13/cobra"
 )
