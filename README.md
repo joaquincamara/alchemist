@@ -10,6 +10,8 @@ Alchemist.go it's a command cli powered by Go, it's commands allow you to transm
 
 ### Installation
 
+- go get github.com/spf13/cobra
+
 ### Commands
 
 To invoque any of the ancestral spells of our book of Alchemy we need to use the special word "alchemist" at the terminal, This gonna open the door to the world of alchemy and bring all the resources to transmute a new alchemist's project.
