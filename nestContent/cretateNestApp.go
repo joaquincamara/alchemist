@@ -81,6 +81,11 @@ func CreateNestApp(appName string) {
 		log.Fatal(appServiceErr)
 	}
 
+	mainTsErr := ioutil.WriteFile(appName+"/src/main.ts", MainTs(), 0644)
+	if mainTsErr != nil {
+		log.Fatal(mainTsErr)
+	}
+
 	// TEST directory files creation
 
 	appE2eSpecErr := ioutil.WriteFile(appName+"/test/app.e2e-spec.ts", AppE2eSpec(), 0644)
