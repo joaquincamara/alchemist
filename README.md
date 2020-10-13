@@ -10,7 +10,9 @@ Alchemist.go it's a command cli powered by Go, it's commands allow you to transm
 
 ### Installation
 
-- go get github.com/spf13/cobra
+In order to use the alchemist command, compile it using the following command:
+
+`go get github.com/spf13/cobra`
 
 ### Commands
 
