@@ -4,6 +4,7 @@ Alchemist.go it's a command cli powered by Go, it's commands allow you to transm
 
 ### Requirements
 
+- Go 1.15
 - Node.js 12.19 or higher.
 - Npm or Yarn to install React.js and Nest.js dependencies.
 
@@ -28,6 +29,8 @@ To invoque any of the ancestral spells of our book of Alchemy we need to use the
 - Add a go RestFul server and a command to transmute it.
 - Add a alchemist command to transmute a React.js and Go restful app.
 - Add a alchemist command for hot reloading at all our apps.
+
+### Dependencies:
 
 **Our transmutations are made possible by Nest.js, react.js and cobra.go**
 
