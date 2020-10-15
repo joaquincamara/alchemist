@@ -10,6 +10,10 @@ Alchemist.go it's a command cli powered by Go, it's commands allow you to transm
 
 ### Installation
 
+In order to use the alchemist command, compile it using the following command:
+
+`go get github.com/joaquincamara/alchemist`
+
 ### Commands
 
 To invoque any of the ancestral spells of our book of Alchemy we need to use the special word "alchemist" at the terminal, This gonna open the door to the world of alchemy and bring all the resources to transmute a new alchemist's project.
@@ -32,7 +36,7 @@ To invoque any of the ancestral spells of our book of Alchemy we need to use the
 
 ### Dependencies:
 
-**Our transmutations are made possible by Nest.js, react.js and cobra.go**
+**Our transmutations are possible by Nest.js, react.js and cobra.go**
 
 ======================
 

@@ -1,4 +1,4 @@
-module alchemist
+module github.com/joaquincamara/alchemist
 
 go 1.15
 

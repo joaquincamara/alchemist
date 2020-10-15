@@ -1,6 +1,6 @@
 package main
 
-import "alchemist/cmd"
+import "github.com/joaquincamara/alchemist/cmd"
 
 func main() {
 	cmd.Execute()
