@@ -2,12 +2,9 @@ package main
 
 import (
 	"flag"
-	"fmt"
 	"html/template"
 	"log"
 	"net/http"
-	"os"
-	"time"
 )
 
 var addr = flag.String("addr", ":1718", "http service address") // Q=17, R=18
@@ -15,55 +12,8 @@ var addr = flag.String("addr", ":1718", "http service address") // Q=17, R=18
 var templ = template.Must(template.New("png").Parse(templateStr))
 
 func main() {
-	path, err := os.Getwd()
-	if err != nil {
-		log.Println(err)
-	}
 
-	goHT(path)
-
-	//initServer()
-}
-
-// Listen for changes at the current dir
-func goHT(dirPath string) {
-	doneChan := make(chan bool)
-
-	go func(doneChan chan bool) {
-		defer func() {
-			doneChan <- true
-		}()
-
-		err := watchDir(dirPath)
-		if err != nil {
-			log.Println(err)
-		}
-
-		fmt.Println("Working dir Changed")
-	}(doneChan)
-
-	<-doneChan
-}
-
-func watchDir(dirPath string) error {
-	initialStat, err := os.Stat(dirPath)
-	if err != nil {
-		return err
-	}
-
-	for {
-		stat, err := os.Stat(dirPath)
-		if err != nil {
-			return err
-		}
-
-		if stat.Size() != initialStat.Size() || stat.ModTime() != initialStat.ModTime() {
-			break
-		}
-		time.Sleep(1 * time.Second)
-	}
-
-	return nil
+	initServer()
 }
 
 func initServer() {
