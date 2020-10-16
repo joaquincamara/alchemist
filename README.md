@@ -18,13 +18,13 @@ In order to use the alchemist command, compile it using the following command:
 
 To invoque any of the ancestral spells of our book of Alchemy we need to use the special word "alchemist" at the terminal, This gonna open the door to the world of alchemy and bring all the resources to transmute a new alchemist's project.
 
-- **\$alchemist transmute** : this command is going to start the transmutation of a new alchemist's project, with a React.js app and a base go server. **NOTE: The development of the base server go is still on work by the moment run this code is going to return a "Still working on this spell." message.**
+- `$ alchemist transmute**` : this command is going to start the transmutation of a new alchemist's project, with a React.js app and a base go server. **NOTE: The development of the base server go is still on work by the moment run this code is going to return a "Still working on this spell." message.**
 
-- **\$alchemist transmute monolit my-app** : this command is going to start the transmutation of a new monolit app with a nest.js app based on the https://github.com/nestjs/typescript-starter.git configuration for the server and a React.js app based on the create-react-app configuration for the client.
+- `$ alchemist transmute monolit my-app` : this command is going to start the transmutation of a new monolit app with a nest.js app based on the https://github.com/nestjs/typescript-starter.git configuration for the server and a React.js app based on the create-react-app configuration for the client.
 
-- **\$alchemist transmute react my-app** : this command is going to start the transmutation of a new stand alone React.js app based on the create-react-app configuration.
+- `$ alchemist transmute react my-app` : this command is going to start the transmutation of a new stand alone React.js app based on the create-react-app configuration.
 
-- **\$alchemist transmute nest my-app** : this command is going to start the transmutation of a new stand alone nest.js app based on the https://github.com/nestjs/typescript-starter.git project configuration.
+- `$ alchemist transmute nest my-app` : this command is going to start the transmutation of a new stand alone nest.js app based on the https://github.com/nestjs/typescript-starter.git project configuration.
 
 **NOTE:** At the 0.1.0 version the transmute command is just able to setup the neccesary files to duplicate a "create react app" base project. You need to run "Yarn" or "npm install" to install the dev dependencies and run the React.js project.
 
