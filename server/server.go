@@ -1,50 +1,72 @@
 package main
 
 import (
-	"flag"
-	"html/template"
+	"fmt"
 	"log"
 	"net/http"
 )
 
-var addr = flag.String("addr", ":1718", "http service address") // Q=17, R=18
+//
+func homeRoute(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Welcome fellow Alchemist to the ApiRest transmutation")
+}
 
-var templ = template.Must(template.New("png").Parse(templateStr))
+// Router serves http
+
+type Router struct {
+	handlers map[string]func(http.ResponseWriter, *http.Request)
+}
+
+// NewRouter creates instances of Router
+
+func NewRouter() *Router {
+	router := new(Router)
+	router.handlers = make(map[string]func(http.ResponseWriter, *http.Request))
+	return router
+}
+
+// ServeHTTP is called for every connection
+func (s *Router) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	f, ok := s.handlers[key(r.Method, r.URL.Path)]
+	if !ok {
+		bad(w)
+		return
+	}
+	f(w, r)
+}
+
+// GET sets get handler
+func (s *Router) GET(path string, f http.HandlerFunc) {
+	s.handlers[key("GET", path)] = f
+}
+
+// POST sets post handler
+func (s *Router) POST(path string, f http.HandlerFunc) {
+	s.handlers[key("POST", path)] = f
+}
+
+// DELETE sets delete handler
+func (s *Router) DELETE(path string, f http.HandlerFunc) {
+	s.handlers[key("DELETE", path)] = f
+}
+
+// PUT sets put handler
+func (s *Router) PUT(path string, f http.HandlerFunc) {
+	s.handlers[key("PUT", path)] = f
+}
+
+func key(method, path string) string {
+	return fmt.Sprintf("%s:%s", method, path)
+}
+
+func bad(w http.ResponseWriter) {
+	w.Header().Set("Content-Type", "application/json")
+	w.Write([]byte(`{"error":"not found"}`))
+}
 
 func main() {
+	router := NewRouter()
+	router.GET("/", homeRoute)
 
-	initServer()
+	log.Fatal(http.ListenAndServe(":8080", router))
 }
-
-func initServer() {
-	flag.Parse()
-	http.Handle("/", http.HandlerFunc(png))
-	err := http.ListenAndServe(*addr, nil)
-	if err != nil {
-		log.Fatal("ListenAndServe:", err)
-	}
-}
-
-func png(w http.ResponseWriter, req *http.Request) {
-	templ.Execute(w, req.FormValue("s"))
-}
-
-const templateStr = `
-<html>
-<head>
-<title>QR Link Generator</title>
-</head>
-<body>
-{{if .}}
-<img src="https://user-images.githubusercontent.com/26718123/94979651-96461b00-04e9-11eb-94d6-660af9663975.{{.}}" />
-<br>
-<br>
-<br>
-{{end}}
-<form action="/" name=f method="GET">
-    <input maxLength=1024 size=70 name=s value="" title="Text to QR Encode">
-    <input type=submit value="Show QR" name=qr>
-</form>
-</body>
-</html>
-`
