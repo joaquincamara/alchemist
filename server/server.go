@@ -5,6 +5,8 @@ import (
 	"net/http"
 )
 
+// CODE REFERENCE TO: Chris Gregori
+
 //
 func homeRoute(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Welcome fellow Alchemist to the ApiRest transmutation")
