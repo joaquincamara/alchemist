@@ -1,10 +1,11 @@
-package main
+package server
 
 import (
 	"fmt"
-	"log"
 	"net/http"
 )
+
+// CODE REFERENCE TO: Chris Gregori
 
 //
 func homeRoute(w http.ResponseWriter, r *http.Request) {
@@ -17,7 +18,7 @@ type Router struct {
 	handlers map[string]func(http.ResponseWriter, *http.Request)
 }
 
-// NewRouter creates instances of Router
+// NewRouter creates instance of Router
 
 func NewRouter() *Router {
 	router := new(Router)
@@ -64,9 +65,7 @@ func bad(w http.ResponseWriter) {
 	w.Write([]byte(`{"error":"not found"}`))
 }
 
-func main() {
-	router := NewRouter()
-	router.GET("/", homeRoute)
+//router := NewRouter()
+//router.GET("/", homeRoute)
 
-	log.Fatal(http.ListenAndServe(":8080", router))
-}
+//log.Fatal(http.ListenAndServe(":8080", router))
