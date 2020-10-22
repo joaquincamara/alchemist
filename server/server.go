@@ -1,4 +1,4 @@
-package server
+package main
 
 import (
 	"fmt"
@@ -62,3 +62,8 @@ func bad(w http.ResponseWriter) {
 	w.Header().Set("Content-Type", "application/json")
 	w.Write([]byte(`{"error":"not found"}`))
 }
+
+//router := NewRouter()
+//router.GET("/", homeRoute)
+
+//log.Fatal(http.ListenAndServe(":8080", router))
