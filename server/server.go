@@ -1,8 +1,7 @@
-package main
+package server
 
 import (
 	"fmt"
-	"log"
 	"net/http"
 )
 
@@ -62,11 +61,4 @@ func key(method, path string) string {
 func bad(w http.ResponseWriter) {
 	w.Header().Set("Content-Type", "application/json")
 	w.Write([]byte(`{"error":"not found"}`))
-}
-
-func main() {
-	router := NewRouter()
-	router.GET("/", homeRoute)
-
-	log.Fatal(http.ListenAndServe(":8080", router))
 }
