@@ -18,7 +18,7 @@ type Router struct {
 	handlers map[string]func(http.ResponseWriter, *http.Request)
 }
 
-// NewRouter creates instances of Router
+// NewRouter creates instance of Router
 
 func NewRouter() *Router {
 	router := new(Router)
