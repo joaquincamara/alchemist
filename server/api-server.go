@@ -6,9 +6,14 @@ func AppServer() []byte {
 	package main
 
 	import (
-		
+		alchemy "github.com/joaquincamara/alchemist/server"
 	)
- 
+
+	func main() {
+		//router := alchemy.NewRouter()
+        //router.GET("/", alchemy.HomeRoute)
+        //log.Fatal(http.ListenAndServe(":8080", router))
+	}
   `)
 
 	return appServer
