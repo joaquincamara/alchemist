@@ -18,7 +18,7 @@ In order to use the alchemist command, compile it using the following command:
 
 To invoque any of the ancestral spells of our book of Alchemy we need to use the special word "alchemist" at the terminal, This gonna open the door to the world of alchemy and bring all the resources to transmute a new alchemist's project.
 
-- `$ alchemist transmute**` : this command is going to start the transmutation of a new alchemist's project, with a React.js app and a base go server. **NOTE: The development of the base server go is still on work by the moment run this code is going to return a "Still working on this spell." message.**
+- `$ alchemist transmute stone my-app**` : this command is going to start the transmutation of a new alchemist's project, with a React.js app and RestApi go server.
 
 - `$ alchemist transmute monolit my-app` : this command is going to start the transmutation of a new monolit app with a nest.js app based on the https://github.com/nestjs/typescript-starter.git configuration for the server and a React.js app based on the create-react-app configuration for the client.
 
@@ -36,10 +36,15 @@ To invoque any of the ancestral spells of our book of Alchemy we need to use the
 
 ### Dependencies:
 
-**Our transmutations are possible by Nest.js, react.js and cobra.go**
+**Our transmutations are possible by:**
+
+- Nest.js
+- React.js and create-react-app
+- cobra.go
+- Server code reference to: Chris Gregori
 
 ======================
 
-**Alchemist.go version: 0.1.0**
+**Alchemist.go version: 0.1.1**
 
 ======================
