@@ -3,12 +3,13 @@ package server
 import (
 	"io/ioutil"
 	"log"
+	"os"
 )
 
 func CreateAlchemistServer(appName string) {
-	AppServer()
-
-	appServerErr := ioutil.WriteFile(appName+"/server.go", AppServer(), 0644)
+	var appServer = ApiServer()
+	os.Mkdir(appName, 0755)
+	appServerErr := ioutil.WriteFile(appName+"/server.go", appServer, 0644)
 	if appServerErr != nil {
 		log.Fatal(appServerErr)
 	}
