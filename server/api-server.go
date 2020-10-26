@@ -1,7 +1,7 @@
 package server
 
 // Creates the standar code for a alchemist RestApi
-func AppServer() []byte {
+func ApiServer() []byte {
 	appServer := []byte(`
 	package main
 
@@ -10,11 +10,11 @@ func AppServer() []byte {
 	)
 
 	func main() {
-		//router := alchemy.NewRouter()
-        //router.GET("/", alchemy.HomeRoute)
-        //log.Fatal(http.ListenAndServe(":8080", router))
+		router := alchemy.NewRouter()
+        router.GET("/", alchemy.HomeRoute)
+        log.Fatal(http.ListenAndServe(":8080", router))
 	}
-  `)
+	`)
 
 	return appServer
 }

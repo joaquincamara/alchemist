@@ -10,7 +10,6 @@ import (
 	"github.com/joaquincamara/alchemist/reactContent"
 	"github.com/joaquincamara/alchemist/server"
 	"github.com/joaquincamara/alchemist/utils"
-
 	"github.com/spf13/cobra"
 )
 
@@ -59,8 +58,8 @@ func init() {
 
 func createStone(appName string) {
 	os.Mkdir(appName, 0755)
-	reactContent.CreateReactApp(appName + "/client")
 	server.CreateAlchemistServer(appName + "/server")
+	reactContent.CreateReactApp(appName + "/client")
 
 	alchemistJsonErr := ioutil.WriteFile(appName+"/alchemist.json", utils.AlchemistJson(appName, "monolit"), 0644)
 	if alchemistJsonErr != nil {
@@ -70,8 +69,8 @@ func createStone(appName string) {
 
 func createMonolit(appName string) {
 	os.Mkdir(appName, 0755)
-	nestContent.CreateNestApp(appName + "/client")
-	reactContent.CreateReactApp(appName + "/server")
+	nestContent.CreateNestApp(appName + "/server")
+	reactContent.CreateReactApp(appName + "/client")
 
 	alchemistJsonErr := ioutil.WriteFile(appName+"/alchemist.json", utils.AlchemistJson(appName, "monolit"), 0644)
 	if alchemistJsonErr != nil {
