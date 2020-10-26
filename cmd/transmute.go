@@ -8,8 +8,8 @@ import (
 
 	"github.com/joaquincamara/alchemist/nestContent"
 	"github.com/joaquincamara/alchemist/reactContent"
+	"github.com/joaquincamara/alchemist/server"
 	"github.com/joaquincamara/alchemist/utils"
-
 	"github.com/spf13/cobra"
 )
 
@@ -44,6 +44,8 @@ var transmuteCmd = &cobra.Command{
 			case "monolit" == args[0]:
 				createMonolit(args[1])
 				break
+			case "stone" == args[0]:
+				createStone(args[1])
 			}
 		}
 
@@ -54,10 +56,21 @@ func init() {
 	rootCmd.AddCommand(transmuteCmd)
 }
 
+func createStone(appName string) {
+	os.Mkdir(appName, 0755)
+	server.CreateAlchemistServer(appName + "/server")
+	reactContent.CreateReactApp(appName + "/client")
+
+	alchemistJsonErr := ioutil.WriteFile(appName+"/alchemist.json", utils.AlchemistJson(appName, "monolit"), 0644)
+	if alchemistJsonErr != nil {
+		log.Fatal(alchemistJsonErr)
+	}
+}
+
 func createMonolit(appName string) {
 	os.Mkdir(appName, 0755)
-	nestContent.CreateNestApp(appName + "/client")
-	reactContent.CreateReactApp(appName + "/server")
+	nestContent.CreateNestApp(appName + "/server")
+	reactContent.CreateReactApp(appName + "/client")
 
 	alchemistJsonErr := ioutil.WriteFile(appName+"/alchemist.json", utils.AlchemistJson(appName, "monolit"), 0644)
 	if alchemistJsonErr != nil {
