@@ -56,6 +56,7 @@ func init() {
 	rootCmd.AddCommand(transmuteCmd)
 }
 
+// Creates the folders and files for a React and Go ApiRest application
 func createStone(appName string) {
 	os.Mkdir(appName, 0755)
 	server.CreateAlchemistServer(appName + "/server")
@@ -67,6 +68,7 @@ func createStone(appName string) {
 	}
 }
 
+// Creates the folders and files for a Nest and React application
 func createMonolit(appName string) {
 	os.Mkdir(appName, 0755)
 	nestContent.CreateNestApp(appName + "/server")
