@@ -6,6 +6,8 @@ func ApiServer() []byte {
 	package main
 
 	import (
+		"log"
+		"net/http"
 		alchemy "github.com/joaquincamara/alchemist/server"
 	)
 
