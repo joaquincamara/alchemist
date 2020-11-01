@@ -23,13 +23,13 @@ var transmuteCmd = &cobra.Command{
 			fmt.Println("")
 			fmt.Println("Uups looks like something get wrong. Use any of the next commands:")
 			fmt.Println("")
-			fmt.Println("> alchemist transmute stone my-app: create a alchemist server and React.js app")
+			fmt.Println("> Alchemist transmute stone my-app: create a alchemist server and React.js app")
 			fmt.Println("")
-			fmt.Println("> alchemist transmute monolit my-app: create a monolite Nest.js and React.js app")
+			fmt.Println("> Alchemist transmute monolit my-app: create a monolite Nest.js and React.js app")
 			fmt.Println("")
-			fmt.Println("> alchemist transmute react my-app: create a stand alone React.js app")
+			fmt.Println("> Alchemist transmute react my-app: create a stand alone React.js app")
 			fmt.Println("")
-			fmt.Println("> alchemist transmute nest my-app: create a stand alone Nest.js app")
+			fmt.Println("> Alchemist transmute nest my-app: create a stand alone Nest.js app")
 			fmt.Println("")
 		}
 
