@@ -21,7 +21,9 @@ var transmuteCmd = &cobra.Command{
 
 		if len(args) == 0 {
 			fmt.Println("")
-			fmt.Println("Still working on this transmutation. Use any of the next commands:")
+			fmt.Println("Uups looks like something get wrong. Use any of the next commands:")
+			fmt.Println("")
+			fmt.Println("> alchemist transmute stone my-app: create a alchemist server and React.js app")
 			fmt.Println("")
 			fmt.Println("> alchemist transmute monolit my-app: create a monolite Nest.js and React.js app")
 			fmt.Println("")
