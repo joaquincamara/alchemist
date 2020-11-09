@@ -54,6 +54,18 @@ router := alchemy.NewRouter()
 }
 ```
 
+**Alchemist server methods**
+
+- GET: `router.GET("/")`
+
+- PUT: `router.PUT("/")`
+
+- DELETE: `router.DELETE("/")`
+
+- PUT: `router.PUT("/")`
+
+**we know, we know, still baby steps but fraid not, we are working in new transmutatios for the server library**
+
 **NOTE:** At the 0.1.0 version the transmute command is just able to setup the neccesary files to duplicate a "create react app" base project. You need to run "Yarn" or "npm install" to install the dev dependencies and run the React.js project.
 
 ### Future plans:
