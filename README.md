@@ -34,6 +34,26 @@ In order to use the alchemist server library, just run:
 
 `go get github.com/joaquincamara/alchemist/server`
 
+### Simple Alchemist server
+
+Here is a simple implementation of simple router with the Alchemist server library:
+
+```golang
+package main
+
+import (
+"log"
+"net/http"
+alchemy "github.com/joaquincamara/alchemist/server"
+)
+
+func main() {
+router := alchemy.NewRouter()
+      router.GET("/", alchemy.HomeRoute)
+      log.Fatal(http.ListenAndServe(":8080", router))
+}
+```
+
 **NOTE:** At the 0.1.0 version the transmute command is just able to setup the neccesary files to duplicate a "create react app" base project. You need to run "Yarn" or "npm install" to install the dev dependencies and run the React.js project.
 
 ### Future plans:
