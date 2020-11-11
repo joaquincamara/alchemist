@@ -26,7 +26,7 @@ To invoque any of the ancestral spells of our book of Alchemy we need to use the
 
 - `$ alchemist transmute nest my-app` : this command is going to start the transmutation of a new stand alone nest.js app based on the https://github.com/nestjs/typescript-starter.git project configuration.
 
-### Server library
+### Alchemist Server
 
 We know that sometimes you do not need all our transmutations to achieve your projects goals, so if you only need to create a server without our base project, you can use just the server library.
 
