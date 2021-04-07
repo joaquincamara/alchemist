@@ -15,7 +15,7 @@ var cfgFile string
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "alchemist",
-	Short: "Alchemist is a base's project generator for React-apps, nest-servers and express-servers",
+	Short: "Alchemist is a base's project generator for React-apps, nest-servers and Go-servers",
 	Long: `
 	
    _____   .__           .__                      .__           __   
