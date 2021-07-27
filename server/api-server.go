@@ -8,12 +8,12 @@ func ApiServer() []byte {
 	import (
 		"log"
 		"net/http"
-		alchemy "github.com/joaquincamara/alchemist/server"
+		"github.com/joaquincamara/silver"
 	)
 
 	func main() {
-		router := alchemy.NewRouter()
-        router.GET("/", alchemy.HomeRoute)
+		router := silver.NewRouter()
+        router.GET("/", silver.HomeRoute)
         log.Fatal(http.ListenAndServe(":8080", router))
 	}
 	`)
