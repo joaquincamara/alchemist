@@ -11,7 +11,6 @@ import (
 var transmuteCmd = &cobra.Command{
 	Use:   "transmute",
 	Short: "Init the setup configuration for a alchemist project web service",
-	Long:  `Init the setup configuration for a alchemist project with React.js for the client and Golang for the backend`,
 	Run: func(cmd *cobra.Command, args []string) {
 
 		switch len(args) {
