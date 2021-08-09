@@ -17,8 +17,11 @@ import (
 
 func main() {
 	router := silver.NewRouter()
+
+	router.Use(middlewares.Recovery)
+
 	router.GET("/", silver.AlchemyDoor)
-	log.Fatal(http.ListenAndServe(":8080", router))
+	silver.Start("8080", router)
 }
 `)
 
