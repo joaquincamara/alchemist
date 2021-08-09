@@ -8,9 +8,9 @@ Alchemist.go it's a command cli powered by Go, it's commands allow you to transm
 
 ## Installation
 
-In order to use the alchemist command, compile it using the following command:
+In order to install alchemist cli, run in your terminal at the root:
 
-`go get github.com/joaquincamara/alchemist`
+`go install github.com/joaquincamara/alchemist@latest v0.1.2@latest`
 
 ## Commands
 
@@ -22,7 +22,7 @@ To invoque any of the ancestral spells of our book of Alchemy we need to use the
 
 We know that sometimes you do not need all our transmutations to achieve your projects goals, so if you want to create a router without our base project, you can use just the Silver.go router library for you transmutations.
 
-In order to use the alchemist server library, just run:
+In order to use the alchemist server library, just run in you project folder:
 
 `go get github.com/joaquincamara/silver`
 
