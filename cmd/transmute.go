@@ -20,7 +20,7 @@ var transmuteCmd = &cobra.Command{
 			fmt.Println("")
 			fmt.Println("Insert the name of your App after the alchemist sub-command: 'alchemist transmute  my-app'")
 		case 1:
-			createStone(args[0])
+			CreateAlchemistServer(args[0])
 		}
 
 	},
@@ -31,7 +31,7 @@ func init() {
 }
 
 // Creates the folders for a alchemist web service
-func createStone(appName string) {
+func CreateAlchemistServer(appName string) {
 	os.Mkdir(appName, 0755)
-	server.CreateAlchemistServer(appName + "/server")
+	server.CreateAlchemistServer(appName)
 }

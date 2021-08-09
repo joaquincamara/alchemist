@@ -10,18 +10,17 @@ var serverTemplate = []byte(`
 package main
 
 import (
-	"log"
-	"net/http"
 	"github.com/joaquincamara/silver"
+	"github.com/joaquincamara/silver/middleware"
 )
 
 func main() {
 	router := silver.NewRouter()
 
-	router.Use(middlewares.Recovery)
+	router.Use(middleware.Recovery)
 
 	router.GET("/", silver.AlchemyDoor)
-	silver.Start("8080", router)
+	router.Start("8080", router)
 }
 `)
 
