@@ -10,7 +10,7 @@ Alchemist.go it's a command cli powered by Go, it's commands allow you to transm
 
 In order to install alchemist cli, run in your terminal at the root:
 
-`go install github.com/joaquincamara/alchemist@latest v0.1.2@latest`
+`go get github.com/joaquincamara/alchemist@latest v0.1.2@latest`
 
 ## Commands
 
