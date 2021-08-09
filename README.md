@@ -38,9 +38,12 @@ alchemy "github.com/joaquincamara/silver"
 )
 
 func main() {
-router := silver.NewRouter()
-      router.GET("/", silver.HomeRoute)
-      log.Fatal(http.ListenAndServe(":8080", router))
+	router := silver.NewRouter()
+
+	router.Use(middlewares.Recovery)
+
+	router.GET("/", silver.AlchemyDoor)
+	silver.Start("8080", router)
 }
 ```
 
