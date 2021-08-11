@@ -34,4 +34,20 @@ func init() {
 func CreateAlchemistServer(appName string) {
 	os.Mkdir(appName, 0755)
 	server.CreateAlchemistServer(appName)
+	/*	cmnd := "go"
+
+		//value := "example.com/joaquincamara/" + appName
+
+		cmd := exec.Command(cmnd)
+		cmd.Path = "./usr/local/go/bin"
+		cmd.Dir = appName
+
+		stdout, err := cmd.Output()
+
+		if err != nil {
+			fmt.Println(err)
+			return
+		}
+
+		fmt.Print(string(stdout))*/
 }
