@@ -1,0 +1,12 @@
+name: myApp
+internal: 
+  aboutMe: 
+    model: 
+      Id: int `json:"Id,omitempty"`
+      Info: string `json:"Title"`
+      Title: string `json:"Info"`
+  coolFeatures: 
+    model: 
+      Id: int `json:"Id,omitempty"`
+      Name: string `json:"Name"
+projectVersion: v0.1.0
