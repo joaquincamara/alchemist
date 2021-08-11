@@ -1,0 +1,7 @@
+
+		package aboutMe
+
+		typeaboutMestruct {
+
+		}
+	
