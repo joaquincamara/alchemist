@@ -4,16 +4,16 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
+	"strings"
 )
 
 func CreateModelFile(domainName string, domainValues map[string]string) {
 	fmt.Println(domainValues)
-	var modelTemplate = []byte(`
-		package aboutMe
+	var modelTemplate = []byte(`package ` + domainName + `
 
-		type` + domainName + `struct {
+type ` + strings.Title(domainName) + ` struct {
 
-		}
+}
 	`)
 
 	err := ioutil.WriteFile("internal/"+domainName+"/"+"model.go", modelTemplate, 0644)
