@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"os/exec"
 	"time"
 
 	"github.com/apoorvam/goterminal"
@@ -82,7 +83,26 @@ func readAlchemistYaml() (templates.AlchemistYAML, error) {
 	return yamlFile, nil
 }
 
-/*	cmnd := "go"
+func CreateGoModFile() {
+	cmnd := "go mod init"
+
+	//value := "example.com/joaquincamara/" + appName
+
+	cmd := exec.Command(cmnd)
+	//cmd.Path = "./usr/local/go/bin"
+	//cmd.Dir = appName
+
+	stdout, err := cmd.Output()
+
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	fmt.Print(string(stdout))
+}
+
+/*	cmnd := "go mod init"
 
 	//value := "example.com/joaquincamara/" + appName
 
