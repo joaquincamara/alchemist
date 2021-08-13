@@ -69,16 +69,16 @@ curriculum
 │	│   main.go
 │
 └───internal
-    │   
-	└───aboutMe
-    │	│   model.go
-	│   │	repository.go
-	│   │	service.go
-	│
-	└───cmd
-    	│   model.go
-	    │	repository.go
-	    │	service.go
+│   │   
+│	└───aboutMe
+│   │	│   model.go
+│	│   │	repository.go
+│	│   │	service.go
+│	│
+│	└───cmd
+│   	│   model.go
+│	    │	repository.go
+│	    │	service.go
 ```
 
 ## Alchemist Router
