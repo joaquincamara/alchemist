@@ -66,11 +66,11 @@ curriculum
 │   │   coolFeaturesHandler.go
 │   
 └───cmd
-││   main.go
+│   │   main.go
 │
 └───internal
 │   │   
-│└───aboutMe
+│   └───aboutMe
 │   │	│   model.go
 │	│   │	repository.go
 │	│   │	service.go
