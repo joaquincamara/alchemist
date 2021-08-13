@@ -60,13 +60,13 @@ curriculum
 │   README.md
 │   alchemist.yaml    
 │   .gitignore
-|
+│
 └───api
 │   │   aboutMeHandler.go
 │   │   coolFeaturesHandler.go
 │   
 └───cmd
-|	│   main.go
+│	│   main.go
 │
 └───internal
     │   
