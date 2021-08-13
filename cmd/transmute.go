@@ -54,7 +54,7 @@ func CreateAlchemistProject() {
 		templates.CreateAlchemistReadme()
 
 		ct.Foreground(ct.Green, false)
-		fmt.Fprintln(writer, "Transmutation Complented")
+		fmt.Fprintln(writer, "Transmutation Complete")
 		writer.Print()
 		ct.ResetColor()
 		time.Sleep(time.Second)
