@@ -16,8 +16,11 @@ In order to install alchemist cli, run this command at your terminal in the root
 
 To invoque any of the ancestral spells of our book of Alchemy we need first to prepare our transmutation circle:
 
-1. mkdir myApp && cd myApp
-2. Create a alchemist.yaml file with the next structure:
+1. `mkdir myApp` && `cd myApp`
+
+2. Run `go mod init myApp` into your working directoty
+
+3. Create a alchemist.yaml file with the next structure:
 
 ```yaml
 name: myApp
@@ -49,9 +52,13 @@ internal:
       Name: string `json:"Name"`
 projectVersion: v0.1.0
 ```
-3. Use the special word "alchemist" at the terminal in you working directory, This gonna open the door to the world of alchemy and bring all the resources to transmute a new alchemist's project:
+4. Use the special word "alchemist" at the terminal in you working directory, This gonna open the door to the world of alchemy and bring all the resources to transmute a new alchemist's project:
 
 - `$ alchemist transmute`
+
+5. For the last, run the next go command into you working directory to fetch all the dependecies:
+
+- `go get`
 
 **Alchemist project example:**
 
@@ -59,6 +66,7 @@ projectVersion: v0.1.0
 curriculum
 │   README.md
 │   alchemist.yaml    
+│   go.mod
 │   .gitignore
 │
 └───api
