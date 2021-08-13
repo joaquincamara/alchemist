@@ -75,10 +75,10 @@ curriculum
 │   │   │	repository.go
 │   │   │	service.go
 │   │
-│	└───coolFeatures
+│   └───coolFeatures
 │       │   model.go
-│	    │	repository.go
-│	    │	service.go
+│       │	repository.go
+│       │	service.go
 ```
 
 ## Alchemist Router
