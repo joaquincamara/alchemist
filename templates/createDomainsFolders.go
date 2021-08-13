@@ -15,6 +15,7 @@ func CreateDomainsFolders(structure AlchemistYAML) {
 		CreateModelFile(k, v["model"])
 		CreateServiceFile(k)
 		CreateRespositoryFile(k)
+		CreateApiHandlers(k)
 
 	}
 }

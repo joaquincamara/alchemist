@@ -10,7 +10,7 @@ func CreateServiceFile(domainName string) {
 
 	var serviceTemplate = []byte(`package ` + domainName + `
 
-type Repository interface {
+type Service interface {
 	Add(` + domainName + ` *` + strings.Title(domainName) + `) error
 	FindAll() ([]*` + strings.Title(domainName) + `, error)
 	Update(` + domainName + ` *` + strings.Title(domainName) + `) error
@@ -37,7 +37,7 @@ func (s *service) Delete(id int) error {
 	return s.` + domainName + `Repo.Delete(id)
 }
 	
-func (s *service) Update(` + domainName + ` *AboutMe) error {
+func (s *service) Update(` + domainName + ` *` + strings.Title(domainName) + `) error {
 	return s.` + domainName + `Repo.Update(` + domainName + `)
 }
 `)

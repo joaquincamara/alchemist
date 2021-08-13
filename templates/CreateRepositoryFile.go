@@ -10,7 +10,7 @@ func CreateRespositoryFile(domainName string) {
 
 	var repositoryTemplate = []byte(`package ` + domainName + `
 
-type Service interface {
+type Repository interface {
 	Add(` + domainName + ` *` + strings.Title(domainName) + `) error
 	FindAll() ([]*` + strings.Title(domainName) + `, error)
 	Update(` + domainName + ` *` + strings.Title(domainName) + `) error
