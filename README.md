@@ -72,13 +72,13 @@ curriculum
 │   │   
 │   └───aboutMe
 │   │   │   model.go
-│   │   │	repository.go
-│   │   │	service.go
+│   │   │   repository.go
+│   │   │   service.go
 │   │
 │   └───coolFeatures
 │       │   model.go
-│       │	repository.go
-│       │	service.go
+│       │   repository.go
+│       │   service.go
 ```
 
 ## Alchemist Router
