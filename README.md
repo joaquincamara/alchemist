@@ -71,12 +71,12 @@ curriculum
 └───internal
 │   │   
 │   └───aboutMe
-│   │	│   model.go
-│	│   │	repository.go
-│	│   │	service.go
-│	│
-│	└───cmd
-│   	│   model.go
+│   │   │   model.go
+│   │   │	repository.go
+│   │   │	service.go
+│   │
+│	└───coolFeatures
+│       │   model.go
 │	    │	repository.go
 │	    │	service.go
 ```
