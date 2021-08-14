@@ -18,9 +18,7 @@ To invoque any of the ancestral spells of our book of Alchemy we need first to p
 
 1. `mkdir myApp` && `cd myApp`
 
-2. Run `go mod init myApp` into your working directoty
-
-3. Create a alchemist.yaml file with the next structure:
+2. Create a alchemist.yaml file with the next structure:
 
 ```yaml
 appName: example.com/myUser/MyApp
@@ -52,13 +50,10 @@ internal:
       Name: string `json:"Name"`
 projectVersion: v0.1.0
 ```
-4. Use the special word "alchemist" at the terminal in you working directory, This gonna open the door to the world of alchemy and bring all the resources to transmute a new alchemist's project:
+3. Use the special word "alchemist" at the terminal in you working directory, This gonna open the door to the world of alchemy and bring all the resources to transmute a new alchemist's project:
 
 - `$ alchemist transmute`
 
-5. For the last, run the next go command into you working directory to fetch all the dependecies:
-
-- `go get`
 
 **Alchemist project example:**
 
@@ -125,6 +120,8 @@ Silver.go website: [Silver.go](https://github.com/joaquincamara/silver).
 
 ### Future plans:
 
+- Add unit tests to our transmutations
+
 - Add cli command to create a basic database connection.
 
 
@@ -141,6 +138,6 @@ Silver.go website: [Silver.go](https://github.com/joaquincamara/silver).
 
 ======================
 
-**Alchemist.go version: 0.1.3**
+**Alchemist.go version: 0.1.4**
 
 ======================
