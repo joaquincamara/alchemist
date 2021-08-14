@@ -133,7 +133,7 @@ Silver.go website: [Silver.go](https://github.com/joaquincamara/silver).
 **Our transmutations are possible by:**
 
 - [Silver.go](https://github.com/joaquincamara/silver).
-- [cobra.go] (https://github.com/spf13/cobra)
+- [cobra.go](https://github.com/spf13/cobra)
 
 ======================
 
