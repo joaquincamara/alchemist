@@ -1,4 +1,4 @@
-name: myApp
+appName: example.com/myUser/MyApp
 internal: 
   aboutMe: 
     model:

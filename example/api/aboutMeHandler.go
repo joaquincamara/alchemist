@@ -2,9 +2,8 @@ package api
 
 import (
 	"encoding/json"
+	"example/internal/aboutMe"
 	"net/http"
-
-	"github.com/joaquincamara/alchemist/example/internal/aboutMe"
 )
 
 type IAboutMeHandler interface {

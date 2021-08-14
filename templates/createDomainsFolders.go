@@ -6,6 +6,7 @@ import (
 
 type AlchemistYAML struct {
 	Internal map[string]map[string]map[string]string `yaml:"internal"`
+	AppName  string                                  `yaml:"appName"`
 }
 
 func CreateDomainsFolders(structure AlchemistYAML) {
@@ -15,7 +16,7 @@ func CreateDomainsFolders(structure AlchemistYAML) {
 		CreateModelFile(k, v["model"])
 		CreateServiceFile(k)
 		CreateRespositoryFile(k)
-		CreateApiHandlers(k)
+		CreateApiHandlers(k, structure.AppName)
 
 	}
 }

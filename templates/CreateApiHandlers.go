@@ -6,13 +6,14 @@ import (
 	"strings"
 )
 
-func CreateApiHandlers(domainName string) {
+func CreateApiHandlers(domainName string, AppName string) {
 
 	var apiHandlerTemplate = []byte(`package api
 
 	import (
 		"encoding/json"
 		"net/http"
+		` + `"` + AppName + `/internal/` + domainName + `"` + `
 	)
 	
 	type I` + strings.Title(domainName) + `Handler interface {

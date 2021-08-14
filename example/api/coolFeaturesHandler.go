@@ -2,9 +2,8 @@ package api
 
 import (
 	"encoding/json"
+	"example/internal/coolFeatures"
 	"net/http"
-
-	"github.com/joaquincamara/alchemist/example/internal/coolFeatures"
 )
 
 type ICoolFeaturesHandler interface {

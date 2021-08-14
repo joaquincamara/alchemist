@@ -16,7 +16,6 @@ func CreateModelFile(domainName string, domainValues map[string]string) {
 
 	}
 
-	fmt.Println(domainProperties)
 	var modelTemplate = []byte(`package ` + domainName + `
 
 type ` + strings.Title(domainName) + ` struct {

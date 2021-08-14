@@ -50,6 +50,8 @@ func CreateAlchemistProject() {
 		os.Mkdir("api", 0755)
 		os.Mkdir("cmd", 0755)
 		os.Mkdir("internal", 0755)
+		CreateGoModFile(projectStructure.AppName)
+		runGoGetCommand(projectStructure.AppName)
 		templates.CreateAlchemistMain()
 		templates.CreateAlchemistGitignore()
 		templates.CreateAlchemistReadme()
@@ -83,38 +85,25 @@ func readAlchemistYaml() (templates.AlchemistYAML, error) {
 	return yamlFile, nil
 }
 
-func CreateGoModFile() {
-	cmnd := "go mod init"
+// add err management
+func CreateGoModFile(appName string) {
 
-	//value := "example.com/joaquincamara/" + appName
-
-	cmd := exec.Command(cmnd)
-	//cmd.Path = "./usr/local/go/bin"
-	//cmd.Dir = appName
-
-	stdout, err := cmd.Output()
-
-	if err != nil {
-		fmt.Println(err)
-		return
+	args := []string{
+		"mod",
+		"init",
 	}
+	args = append(args, appName)
+	e := exec.Command("go", args...)
+	e.Output()
 
-	fmt.Print(string(stdout))
 }
 
-/*	cmnd := "go mod init"
-
-	//value := "example.com/joaquincamara/" + appName
-
-	cmd := exec.Command(cmnd)
-	cmd.Path = "./usr/local/go/bin"
-	cmd.Dir = appName
-
-	stdout, err := cmd.Output()
-
-	if err != nil {
-		fmt.Println(err)
-		return
+// add err management
+func runGoGetCommand(appName string) {
+	args := []string{
+		"get",
+		"github.com/joaquincamara/silver",
 	}
-
-	fmt.Print(string(stdout))*/
+	e := exec.Command("go", args...)
+	e.Output()
+}
