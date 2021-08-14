@@ -23,7 +23,7 @@ To invoque any of the ancestral spells of our book of Alchemy we need first to p
 3. Create a alchemist.yaml file with the next structure:
 
 ```yaml
-name: myApp
+appName: example.com/myUser/MyApp
 internal: 
   domainName: 
     model:
@@ -39,7 +39,7 @@ Inside the internal section you need to specify the name of all the domains that
 
 ```yaml
 
-name: curriculum
+appName: example.com/myUser/MyApp
 internal: 
   aboutMe: 
     model:
