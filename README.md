@@ -138,6 +138,6 @@ Silver.go website: [Silver.go](https://github.com/joaquincamara/silver).
 
 ======================
 
-**Alchemist.go version: 0.1.4**
+**Alchemist.go version: 0.1.5**
 
 ======================
