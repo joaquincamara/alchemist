@@ -50,18 +50,20 @@ func CreateAlchemistProject() {
 		os.Mkdir("api", 0755)
 		os.Mkdir("cmd", 0755)
 		os.Mkdir("internal", 0755)
+		os.Mkdir("public", 0755)
 		CreateGoModFile(projectStructure.AppName)
 		runGoGetCommand(projectStructure.AppName)
 		templates.CreateAlchemistMain()
 		templates.CreateAlchemistGitignore()
 		templates.CreateAlchemistReadme()
+		templates.CreateIndexHTML()
+		templates.CreateDomainsFolders(projectStructure)
 
 		ct.Foreground(ct.Green, false)
 		fmt.Fprintln(writer, "Transmutation Complete")
 		writer.Print()
 		ct.ResetColor()
 		time.Sleep(time.Second)
-		templates.CreateDomainsFolders(projectStructure)
 	}
 
 }
