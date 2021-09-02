@@ -120,7 +120,9 @@ Silver.go website: [Silver.go](https://github.com/joaquincamara/silver).
 
 ### Future plans:
 
-- Add unit tests to our transmutations
+- Add microservices and go kit support.
+
+- Add unit tests to our transmutations.
 
 - Add cli command to create a basic database connection.
 
